@@ -1,9 +1,28 @@
-html, body, .container-fluid, .row {
-    height: 100%;
-}
-
 body {
   background-color: white;
+  min-height: 100%;
+}
+
+
+html,body, header, footer, .row {
+  padding:0;
+  margin:0;
+}
+
+html, body, .container-fluid, .row {
+  height: 100%;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/*Tweak this to best match sidenav*/
+li a:hover:not(.active) {
+  color: #0a7f12;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
 }
 
 #intro{
@@ -17,58 +36,83 @@ body {
 }
 
 #profile{
-  position: absolute;
-  text-align: center;
+  position: relative;
+  text-align: middle;
+  vertical-align: text-top;
 
-  left: 20px;
-  top: 170px;
+
 	max-width:100%;
 	height:auto;
   border: 6px solid black;
 }
 
-
-.sidenav{
-  position: absolute;
-  background-color: #0a7f12;
-  height: auto;
-  font-size: 200%;
-}
-
-.sidenav a{
-  color: white;
-  padding: 10px 10px 10px 10px;
-  text-decoration: none;
-}
-
 .infocol{
-  position: absolute;
+  position: relative;
   overflow-y: scroll;
-  background-color: #1ebc28;
+  background: #1ebc28;
+  background: linear-gradient(to right, #1ebc28 , #0a7f12);
   height: 100%;
+  min-height: 100%;
 }
 
-/*Tweak this to best match sidenav */
-li a:hover:not(.active) {
-    background-color: grey;
+
+.infocol h1 {
+ font: 55px/65px Helvetica, sans-serif;
+ color: #e3e5e8;
 }
 
-.navmenu ul{
+.infocol h2 {
+  color: ##3a3a3a;
+}
+
+.infocol p, .infocol li, .infocol td {
+  font: 20px Helvetica, sans-serif;
+}
+
+.navmenu{
+  min-height: 100%;
+  vertical-align: middle;
+}
+
+.navbar {
+  vertical-align: middle;
+}
+
+.navbar ul{
   list-style-type: none;
   text-decoration: none;
   text-align: center;
   list-style: none;
-  margin: 30px 40px 0px 0px;
+  vertical-align: middle;
+  margin: 30px 40px 30px 0px;
 }
 
-.navmenu li{
-  margin: 40px 10px 30px 10px;
+.navbar li{
+  margin: 30px 10px 30px 10px;
+}
+
+.sec{
+  margin: 250px 0px 500px 0px;
+}
+
+.sidenav{
+  position: relative;
+  background-color: #0a7f12;
+  background: radial-gradient(#1ebc28 , #0a7f12);
+
+  max-height: 100%;
+  font-size: 150%;
+  vertical-align: middle;
+  overflow-y: hidden;
+  height:100%;
+  min-height: 100%;
+}
+
+.sidenav a{
+  color: white;
+  text-decoration: none;
 }
 
 .spacer{
-  margin: 200px 70px 250px 70px;
-}
-
-h1 {
- font: 55px/65px Helvetica, sans-serif;
+  margin: 0px 70px 0px 70px;
 }

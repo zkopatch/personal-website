@@ -19,10 +19,31 @@
 
         <!--JQuery CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Implement JS/JQUERY for slow scroll -->
+        <script>
+          $("#about").click(function() {
+            scrollToDiv('about');
+          });
+
+          $("#Contact").click(function() {
+            scrollToDiv('Contact');
+          });
+
+          $("#skills").click(function() {
+            scrollToDiv('skills');
+          });
+
+          $("#education").click(function() {
+            scrollToDiv('education');
+          });
+        </script>
+
     </head>
 
-    <!-- Body is edited with Spy Scroll Capabilities -->
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="gradient"></div>
+
+    <body>
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-3 sidenav">
@@ -30,13 +51,11 @@
               <div class="navmenu">
                 <nav class="navbar">
                   <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!--space to move over profile picture -->
-                    <br><br><br><br><br>
+                    <li><a href="#about" name="about">About</a></li><hr>
+                    <li><a href="#contact" name="contact">Contact</a></li><hr>
                     <li><img src="img/profile.jpg" id=profile class="img-circle" alt="Profile Picture"
-                     height="250px" width="250px"></li>
-                    <li><a href="#skills">Skills</a></li>
+                     height="250px" width="250px"></li><hr>
+                    <li><a href="#skills">Skills</a></li><hr>
                     <li><a href="#education">Education</a></li>
                   </ul>
                 </nav>
@@ -44,52 +63,63 @@
             </div>
             <div class="col-sm-9 infocol">
               <div class="spacer">
-                <div id="about">
+                <div class="sec" id="about">
                   <h1>Zachary Kopatch</h1>
                   <h2>Software Developer</h2>
-                  <!-- -->
-                  <p>I am a Java Software developer with a focus in Back-end Services and Database Manager. I have specialized in building Java-based applications backed by MySQL Databases. If you are a Client seeking webservices or an Employer seeking further information, feel free to contact me. You can find a list of some of my skills and proficient technologies below.</p>
-                  <!--Replace these br tags by placing classes over the p tag of each section, then add padding to visually seperate -->
-                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <p>I am a Java Software developer with a focus in Back-end Services and Database Manager.
+                     I have specialized in building Java-based applications backed by MySQL Databases.
+                     If you are a Client seeking webservices or an Employer seeking further information, feel free to contact me.
+                     You can find a list of some of my skills and proficient technologies below.
+                  </p>
                 </div>
-                <div id="contact">
+                <div class="sec" id="contact">
 
                   <table class="contactInfo">
-                  <tr>
-                    <th><h1>Contact Me:</h1></th>
-                  </tr>
-                  <tr>
-                    <td>Email:</td> <td>ZKopatch@Gmail.com</td>
-                  </tr>
-                  <tr>
-                    <td>LinkedIn:</td> <td><a href = "https://LinkedIn.com/in/ZKopatch">https://LinkedIn.com/in/ZKopatch</a></td>
-                  </tr>
-                  <tr>
-                    <td>Github:</td> <td><a href = "https://Github.com/ZKopatch">https://Github.com/ZKopatch</a></td>
-                  </tr>
+                    <tr>
+                      <th><h1>Contact Me:</h1></th>
+                    </tr>
+                    <tr>
+                      <td><em><b>Email:</b></em></td> <td><a href = "mailto: zkopatch@Gmail.com" target="_blank">ZKopatch@Gmail.com</a></td>
+                    </tr>
+                    <tr>
+                      <td><em><b>LinkedIn:</b></em></td> <td><a href = "https://LinkedIn.com/in/ZKopatch" target="_blank">https://LinkedIn.com/in/ZKopatch</a></td>
+                    </tr>
+                    <tr>
+                      <td><em><b>Github:</b></em></td> <td><a href = "https://Github.com/ZKopatch" target="_blank">https://Github.com/ZKopatch</a></td>
+                    </tr>
                   </table>
-                  <!--Reference top br tag comment -->
-                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
-                <div id="skills">
-                  <h1>Section 3</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <!--Reference top br tag comment -->
-                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="sec" id="skills">
+                  <h1>Skills, Languages, Software...</h1>
+                  <ul>
+                     <li>Supporting backend services with Java and SQL<br></li>
+                     <li>Building Java-based applications<br></li>
+                     <li>Documenting and collaborating through a Version Control System (Github)<br></li>
+	                   <li>Creating Unit and Integrated Tests for applications<br></li>
+	                   <li>Working in an Agile Development Environment<br></li>
+	                   <li>Building HTML5/CSS web pages and styling them with JavaScript<br></li>
+	                   <li>Creating and managing information for a MySQL Database</li><br><br>
+                     </ul>
+                     <p>
+                     <b>Languages:</b> Java, SQL, HTML5, CSS, JavaScript</br>
+                     <b>Software:</b> Netbeans, Eclipse, Atom, Notepad++, Mathematica, Windows, OS X</br>
+                     <b>Tools:</b> Github, Amazon Web Services (S3, EC2), MySQLWorkbench
+                     </p>
                 </div>
-                <div id="education">
+                <div class="sec" id="education">
                   <h1>Education</h1>
-                  <h2>B.S., Computer Science</h2>
-                  <h3>Received from Towson University</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <h2>B.S., Computer Science<br>Received from Towson University</h2>
+                  <p>I am a recent graduate from Towson University.
+                     During my time in University I found an interest in analyzing algorithms and their optimization.
+                     This interest has led to my current pursuit of entering the fields of Machine Learning and Artificial Intelligence.
+                     Some of the courses I have taken which reflect my current interests would be:
+                     Theory of Computation, Artificial Intelligence Robotics, Data Structures and Algorithm Analysis, Software Engineering, and Web Programming.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
-
 
     </body>
 </html>
