@@ -3,7 +3,6 @@ body {
   min-height: 100%;
 }
 
-
 html,body, header, footer, .row {
   padding:0;
   margin:0;
@@ -23,6 +22,21 @@ li a:hover:not(.active) {
   border: 2px solid black;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+td a:hover:not(.active){
+  color: white;
+  text-decoration: none;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 #intro{
@@ -55,14 +69,27 @@ li a:hover:not(.active) {
   min-height: 100%;
 }
 
-
 .infocol h1 {
- font: 55px/65px Helvetica, sans-serif;
- color: #e3e5e8;
+  font: 55px/65px Futura, sans-serif;
+  color: #e3e5e8;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
-.infocol h2 {
-  color: ##3a3a3a;
+.infocol h2, .infocol td em, .infocol li {
+  color: #7f7a7a;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.infocol a{
+  color: #3a3a3a;
 }
 
 .infocol p, .infocol li, .infocol td {
@@ -89,6 +116,11 @@ li a:hover:not(.active) {
 
 .navbar li{
   margin: 30px 10px 30px 10px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .sec{
